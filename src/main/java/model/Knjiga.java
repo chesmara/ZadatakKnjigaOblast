@@ -4,7 +4,9 @@ package model;
  * Created by androiddevelopment on 16.1.17..
  */
 
+import com.j256.ormlite.dao.ForeignCollection;
 import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
 
 import java.util.ArrayList;
@@ -14,9 +16,9 @@ import java.util.Date;
 @DatabaseTable(tableName = "Knjiga")
 public class Knjiga {
 
-    private static final String POLJE_NASLOV = 'naslov';
-    private static final String POLJE_BROJ_STRANA = 'broj_strana';
-    private static final String POLJE_DATUM_IZDAVANJA = 'datum_izdavanja';
+    private static final String POLJE_NASLOV = "naslov";
+    private static final String POLJE_BROJ_STRANA = "broj_strana";
+    private static final String POLJE_DATUM_IZDAVANJA = "datum_izdavanja";
 
 
     @DatabaseField(generatedId = true)
@@ -29,12 +31,10 @@ public class Knjiga {
     @DatabaseField(columnName = POLJE_DATUM_IZDAVANJA,canBeNull = false, unique=false)
     private Date datumIzdavanja;
 
+    @ForeignCollectionField (foreignFieldName = "oblasti"  , eager = true)
+    private ForeignCollection<Oblast> oblasti;
 
-    private boolean prisutna;
-
-    private ArrayList<Oblast> oblasti = new ArrayList<Oblast>();
-
-
+    private  boolean prisutna;
 
     //-----------------------------------konstruktori--------------------
 
@@ -46,7 +46,7 @@ public class Knjiga {
         this.naslov=naslov;
         this.brojStrana=brojStrana;
         this.datumIzdavanja=datumIzdavanja;
-        this.oblasti=new ArrayList<Oblast>();
+
 
     }
 

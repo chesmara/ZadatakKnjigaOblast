@@ -8,7 +8,7 @@ import java.sql.SQLException;
  * Created by androiddevelopment on 16.1.17..
  */
 public class Zadatak3IzmenaVrednosti {
-    public static void main(String[] args) {
+
         public static void main(String[] args) {
 
             Connection c = null;
@@ -41,4 +41,4 @@ public class Zadatak3IzmenaVrednosti {
 
 
     }
-}
+

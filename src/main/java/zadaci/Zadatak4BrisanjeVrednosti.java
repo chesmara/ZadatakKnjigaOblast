@@ -8,7 +8,7 @@ import java.sql.SQLException;
  * Created by androiddevelopment on 16.1.17..
  */
 public class Zadatak4BrisanjeVrednosti {
-    public static void main(String[] args) {
+
 
         public static void main(String[] args) {
 
@@ -42,4 +42,4 @@ public class Zadatak4BrisanjeVrednosti {
 
 
     }
-}
+
