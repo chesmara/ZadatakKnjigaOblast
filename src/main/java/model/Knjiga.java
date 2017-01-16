@@ -31,7 +31,7 @@ public class Knjiga {
     @DatabaseField(columnName = POLJE_DATUM_IZDAVANJA,canBeNull = false, unique=false)
     private Date datumIzdavanja;
 
-    @ForeignCollectionField (foreignFieldName = "oblasti"  , eager = true)
+    @ForeignCollectionField (foreignFieldName = "knjigaref"  , eager = true)
     private ForeignCollection<Oblast> oblasti;
 
     private  boolean prisutna;

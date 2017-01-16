@@ -23,14 +23,15 @@ public class Oblast {
     @DatabaseField(columnName = POLJE_POCETNA_STRANA, canBeNull = false)
     private int pocetnaStrana;
     @DatabaseField(foreign = true, foreignAutoRefresh = false)
-    private Knjiga knjiga;
+    private Knjiga knjigaref;
 
     //----------------------------konstruktori----------------------------
     public Oblast(){}
 
-    public Oblast(int id, String naziv, int pocetnaStrana, Knjiga knjiga) {
+    public Oblast(String naziv, int pocetnaStrana) {
         this.naziv = naziv;
         this.pocetnaStrana = pocetnaStrana;
+
 
     }
 
