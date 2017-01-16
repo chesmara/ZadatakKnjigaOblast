@@ -53,6 +53,15 @@ public class Knjiga {
 
     //--------------get i set metode---------------------------
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
     public String getNaslov() {
         return naslov;
     }
@@ -73,9 +82,12 @@ public class Knjiga {
         return datumIzdavanja;
     }
 
+
     public void setDatumIzdavanja(Date datumIzdavanja) {
+
         this.datumIzdavanja = datumIzdavanja;
     }
+
 
     //-------------------------------to string-------------------------------
 
